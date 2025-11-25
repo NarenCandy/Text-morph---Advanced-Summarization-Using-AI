@@ -51,6 +51,7 @@ TextMorph is an advanced text processing application designed for summarization 
 ## 👨‍💻 Team
 
 - Vidisha
+- Naren
 - Varshita
 - Ajith Reddy
 
@@ -156,7 +157,7 @@ TextMorph/
 
 ## 📄 License
 
-[Add your license information here]
+This project is intended for educational and internship demonstration purposes.
 
 ---
 
