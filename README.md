@@ -1,141 +1,169 @@
-🧠 TextMorph
-Advanced Text Summarization, Paraphrasing & Document Intelligence
+# 📝 TextMorph: Advanced Text Summarization & Paraphrasing
 
-🚀 TextMorph is an AI-powered system for summarization, paraphrasing, Q&A and translation of large documents such as news articles, academic research, legal policies, and educational content.
+🚀 **TextMorph** is an AI-powered system for **document summarization, simplification, Q&A, and translation**. It ingests large documents, extracts key insights, and generates **clear, concise summaries** across multiple domains like **news, research papers, legal & policy documents, and education**.
 
-It combines state-of-the-art NLP models, secure backend services, and a streamlined UI to deliver fast and meaningful text transformations.
+---
 
-✨ Key Use Cases
+## 🎯 Project Overview
 
-📢 News Summarization → Quick and accurate digest of real-time updates
+TextMorph is an advanced text processing application designed for summarization and paraphrasing, built as part of a milestone-driven development internship project.
 
-📑 Research Papers → Faster comprehension of complex content
+✅ **The project has successfully completed all planned milestones**, encompassing:
+- 🧪 Model training
+- 🔗 Backend and frontend integration
+- 📊 Evaluation systems
+- 🛠️ Admin dashboard for content and user management
 
-⚖️ Legal & Policy Docs → Simplified interpretation with reduced jargon
+---
 
-🎓 Education → Helps students & teachers with clarity and accessibility
+## ✨ Why This Project?
 
-🎯 Achievements
+- 📢 **News Summarization** → Get digestible news highlights in seconds
+- 📑 **Research Papers** → Quickly understand lengthy academic texts
+- ⚖️ **Legal & Policy Docs** → Simplify complex jargon into plain language
+- 🎓 **Education** → Help students & teachers with short, simplified content
 
-✔ Completed end-to-end development
-✔ Model training + fine-tuning
-✔ Backend–Frontend integration
-✔ Live evaluation & metrics
-✔ Admin dashboard for user/content management
+---
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	🧩 Streamlit
-Backend	⚡ FastAPI
-Database	🛢️ MySQL
-AI Models	🧠 Pegasus-XSum (Summarization), Facebook BART (Summary + Paraphrasing)
-Version Control	🐙 GitHub
-Deployment	Local (Docker support planned)
-🚀 Core Features
+## 🚀 Features
 
-📂 Upload documents: PDF, DOC, Text input
+- Upload documents (PDF, DOCX, URL ingestion)
+- AI-powered **Summarization** (short, medium, long)
+- **Paraphrasing** for simplified versions
+- **Multilingual Translation** support
+- Query-based **QnA system**
+- Analytics-powered **Admin Dashboard**
+- 🔐 User Authentication & Profile Management
+- 📂 Document Ingestion & Indexing
 
-📝 Summarization: Short, Medium, Detailed
+---
 
-✍️ Paraphrasing: Multiple rewriting styles
+## 🛠️ Tech Stack
 
-🌐 Multilingual Translation
+- **Frontend** → Streamlit
+- **Backend** → FastAPI
+- **Database** → MySQL
+- **AI Models** → Pegasus XSUM, Facebook BART
+- **Deployment** → TBD
 
-❓ Question & Answering from document context
+---
 
-📊 Admin dashboard: Analytics + user management
+## 👨‍💻 Team
 
-📦 Model Checkpoints (Required)
+- Vidisha
+- Varshita
+- Ajith Reddy
 
-Large pre-trained models are hosted on Drive (~2 GB each):
+---
 
-facebook-bart-summary
+## 📦 Model Checkpoints
 
-facebook-bart-paraphrase
+The necessary pre-trained models for summarization and paraphrasing have been uploaded to Google Drive due to their large size (~2.08 GB each).
 
-pegasus-xsum
+📥 **Download the models from the following links:**
 
-📥 Download from Drive:
-🔗 https://drive.google.com/drive/folders/17vlFTM0ZSE_DQ3YGDT8NNck1UiAe-2Ay?usp=drive_link
+- **facebook-bart-summary**: [Download](https://drive.google.com/drive/folders/17vlFTM0ZSE_DQ3YGDT8NNck1UiAe-2Ay?usp=drive_link)
+- **facebook-bart-paraphrase**: [Download](https://drive.google.com/drive/folders/1fLjidgeBNmuxMcXKhwshfsQlALGeYsW-?usp=drive_link)
+- **pegasus-xsum**: [Download](https://drive.google.com/drive/folders/1DU8I2ORp4J42CaA4ffXaSFY918ht0Vo4?usp=drive_link)
 
-🔗 https://drive.google.com/drive/folders/1fLjidgeBNmuxMcXKhwshfsQlALGeYsW-?usp=drive_link
-
-🔗 https://drive.google.com/drive/folders/1DU8I2ORp4J42CaA4ffXaSFY918ht0Vo4?usp=drive_link
-
-📍 Place downloaded models under:
-
+📁 **After downloading, place the model files inside the project directory at:**
+```
 backend/models/
+```
 
-📚 Dataset (for training/evaluation)
+---
 
-Dataset used for experimentation and testing:
-🔗 https://drive.google.com/file/d/1IOxJszNGT6B6ZJFatdH_ixEamusSTuOJ/view?usp=drive_link
+## 📚 Dataset
 
-Expected columns:
+The dataset used for training and evaluation is also available for download via Google Drive:
 
-input_text, target_text, task (summary/paraphrase)
+- **Dataset**: [Download](https://drive.google.com/file/d/1IOxJszNGT6B6ZJFatdH_ixEamusSTuOJ/view?usp=drive_link)
 
-
-📍 Place dataset under:
-
+📁 **Download the dataset and place it in the project directory under:**
+```
 dataset/
+```
 
-⚙️ Setup Instructions
-# Create environment
-pip install -r requirements.txt
+⚠️ **Note:** If you are going to use your own dataset, make sure that it has `input_text`, `target_text`, and `task` (summary or paraphrase) columns.
 
-# Add environment variables
-# Create `.env` and follow `.env.example`
+---
 
-# Run Backend (FastAPI)
-cd backend
-uvicorn main:app --reload
+## ⚙️ Setup Instructions
 
-# Run Frontend (Streamlit)
-cd frontend
-streamlit run app.py
+1. **Create a `.env` file** in the project root containing your environment variables—refer to `.env.example` for required variable names.
 
-📁 Project Structure (Simplified)
+2. **Install project dependencies** using pip:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Ensure that the downloaded model checkpoints and dataset are in the paths specified above.**
+
+4. **Run the application:**
+   ```bash
+   # Start the backend
+   cd backend
+   uvicorn main:app --reload
+
+   # Start the frontend (in a new terminal)
+   streamlit run app.py
+   ```
+
+---
+
+## 📅 Development Timeline
+
+| Week | Task |
+|------|------|
+| **1-2** | Setup repo, environment, authentication module |
+| **3-4** | Document ingestion & indexing module |
+| **5-6** | Summarization & translation modules |
+| **7** | Admin dashboard & testing |
+| **8** | Final review, bug fixing, presentation |
+
+---
+
+## 📂 Project Structure
+
+```
 TextMorph/
-│
-├─ backend/
-│  ├─ models/
-│  ├─ routes/
-│  └─ ...
-├─ frontend/
-│  └─ app.py
-├─ dataset/
-├─ requirements.txt
-└─ README.md
+├── backend/
+│   ├── models/          # Place downloaded model checkpoints here
+│   ├── main.py          # FastAPI application
+│   └── ...
+├── frontend/
+│   ├── app.py           # Streamlit application
+│   └── ...
+├── dataset/             # Place downloaded dataset here
+├── .env                 # Environment variables
+├── .env.example         # Example environment variables
+├── requirements.txt     # Python dependencies
+└── README.md           # This file
+```
 
-👥 Team Members
-Name	Role
-Vidisha	Model Training & Evaluation
-Varshita	UI/UX & Streamlit Frontend
-Ajith Reddy	Backend Engineering & API
-You	Full Integration + Backend & Dashboard + Deployment Setup
+---
 
-⭐ You can customize your role to highlight maximum impact
+## 🎯 Project Goals
 
-🔮 Future Scope
+- ✅ User Authentication & Profile Management
+- ✅ Document Ingestion & Indexing
+- ✅ Query Processing & QnA
+- ✅ Summarization & Simplification
+- ✅ Language Translation
+- ✅ Admin Dashboard
 
-🔐 JWT-based Authentication
+---
 
-☁️ Cloud deployment (Render / AWS / Azure)
+## 📄 License
 
-📊 Real-time metrics & analytics
+[Add your license information here]
 
-🎚️ CPU/GPU auto-optimization
+---
 
-🧩 Plugin architecture for more NLP tasks
+## 🤝 Contributing
 
-📌 Development Timeline
-Week	Milestone
-1-2	Backend/Auth setup
-3-4	Document ingestion & indexing
-5-6	Summarization + Paraphrasing
-7	Admin dashboard
-8	Final testing & review
-📄 License
+Contributions, issues, and feature requests are welcome!
 
-This project is intended for educational and internship demonstration purposes.
+---
+
+
